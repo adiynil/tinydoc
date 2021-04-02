@@ -1,0 +1,21 @@
+{
+  "name": "tinydoc-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "node ./bin/www"
+  },
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "body-parse": "^0.1.0",
+    "cookie-parser": "~1.4.4",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.1",
+    "http-errors": "^1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.5.0",
+    "validator": "^13.5.2"
+  }
+}
