@@ -1,0 +1,50 @@
+@url=http://localhost:5000
+
+###
+# @name login
+POST {{url}}/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "account": "adiynil",
+    "password": "123456",
+    "keepLogin": true
+}
+###done
+# @name all
+GET {{url}}/doc/all HTTP/1.1
+
+
+###
+# @name getallwithauth
+GET {{url}}/doc/all HTTP/1.1
+Authorization: {{login.response.body.token}}
+
+###
+GET {{url}}/doc/adiynil HTTP/1.1
+
+###
+GET {{url}}/doc/adiynil/sdasd HTTP/1.1
+
+###
+DELETE {{url}}/doc/delete HTTP/1.1
+Content-Type: application/json
+
+["609dd122622d025084c43397","609dd290813af86ef0d69e29","609dd463813af86ef0d69e2c","609dd401813af86ef0d69e2b","609dd3ae813af86ef0d69e2a"]
+
+###
+PUT {{url}}/doc/update HTTP/1.1
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+{
+    "option": {
+      "is_download": true,
+      "toc": true,
+      "tocExpand": true
+    },
+    "markdown": "# markdown test",
+    "tag": [],
+    "_id": "609dd498813af86ef0d69e2d",
+    "title": "测试标题"
+}

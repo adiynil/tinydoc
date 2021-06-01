@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "node ./bin/www"
+    "serve": "node ./bin/www",
+    "dev": "node-dev ./bin/www"
   },
   "dependencies": {
     "archiver": "^5.3.0",
@@ -15,6 +16,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.2",
     "morgan": "~1.9.1",
+    "nanoid": "^3.1.23",
     "nodemailer": "^6.5.0",
     "validator": "^13.5.2"
   }

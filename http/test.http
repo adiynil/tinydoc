@@ -1,0 +1,41 @@
+@url=http://localhost:5000
+
+###
+GET {{url}}/download/adiynil HTTP/1.1
+
+###
+# @name login
+POST {{url}}/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "account":"adiynil",
+    "password":"123456"
+}
+
+###
+GET {{url}}/option/get HTTP/1.1
+
+###
+POST {{url}}/option/insert HTTP/1.1
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+# {
+#     "name":"推荐用户",
+#     "key":"user",
+#     "value":["adiynil","linyida","test"],
+#     "remark":"发现页的推荐用户，输入用户的账号"
+# }
+
+{
+    "name":"发现知识库",
+    "key":"explore",
+    "value":["adiynil@es6","adiynil@html","adiynil@bash","adiynil@js","adiynil@webapi","adiynil@ssh"],
+    "remark":"发现页的推荐知识库，格式为‘account@identity’"
+}
+
+###
+DELETE {{url}}/option/delete/sads HTTP/1.1
+Content-Type: application/json
+Authorization: {{login.response.body.token}}

@@ -1,0 +1,68 @@
+<html>
+	<body
+		style="
+			color: #333;
+			background: #fff;
+			word-wrap: break-word;
+			padding: 0;
+			margin: 0;
+			font-size: 16px;
+			line-height: 1.6;
+			-webkit-text-size-adjust: 100%;
+			-webkit-font-smoothing: antialiased;
+		"
+	>
+		<div style="padding: 20px 20px; background: #f9f9f9">
+			<div style="max-width: 600px; margin: 0 auto">
+				<h1
+					style="
+						font-weight: 300;
+						font-size: 1.4em;
+						margin: 0.67em 0;
+						line-height: 1.4;
+					"
+				>
+					TinyDoc 的通知
+				</h1>
+			</div>
+		</div>
+		<div style="padding: 20px 20px">
+			<div style="max-width: 600px; margin: 0 auto">
+				<p>
+					你正在申请将你的邮箱与账号<span
+						style="margin: 0 5px; color: #606266"
+						>{{account}}</span
+					>进行绑定，绑定成功之后你可以使用邮箱进行登录。如果你确认是本人在操作，请在两个小时内点击以下按钮进行验证。
+                    <p>
+                        <a style="text-decoration:none;color: #fafafa;cursor:pointer;border: none;padding: 12px 30px;background-color: rgb(47, 185, 66);" target="_blank" href="{{link}}">马上激活</a>
+                    </p>
+                    或者复制以下链接粘贴到浏览器进行验证。
+                    <p>
+                        <a href="{{link}}">{{link}}</a>
+                    </p>
+				</p>
+				<p>The TinyDoc Team</p>
+			</div>
+		</div>
+		<div
+			style="
+				padding: 20px 20px;
+				background: #eee;
+				color: #666;
+				font-size: 90%;
+			"
+		>
+			<div style="max-width: 600px; margin: 0 auto">
+				<p>本邮件由 TinyDoc 系统自动发出，请勿直接回复</p>
+				<p>
+					你可以<a
+						target="_blank"
+						href="http://localhost:8080/feedback"
+						style="color: #444"
+						>点击这里</a
+					>反馈您的意见。
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
